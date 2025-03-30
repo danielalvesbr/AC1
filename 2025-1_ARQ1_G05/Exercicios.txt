@@ -1,0 +1,51 @@
+Exercícios
+
+01.) Projetar e descrever em Verilog, usando apenas portas nativas nor
+um módulo equivalente à expressão (a & ~b).
+O nome do arquivo deverá ser Guia_0501.v,
+e poderá seguir o modelo descrito anteriormente.
+Incluir previsão de testes.
+Simular o módulo no Logisim e
+apresentar layout do circuito e subcircuitos.
+R:
+
+
+02.) Projetar e descrever em Verilog, usando apenas portas nativas nand
+um módulo equivalente à expressão (~a | b).
+O nome do arquivo deverá ser Guia_0502.v,
+e poderá seguir o modelo descrito anteriormente.
+Incluir previsão de testes.
+Simular o módulo no Logisim e
+apresentar layout do circuito e subcircuitos.
+
+03.) Projetar e descrever em Verilog, usando apenas portas nativas nor
+módulo equivalente à expressão ~(a |~b).
+O nome do arquivo deverá ser Guia_0503.v,
+e poderá seguir o modelo descrito anteriormente.
+Incluir previsão de testes.
+Simular o módulo no Logisim e
+apresentar layout do circuito e subcircuitos.
+
+04.) Projetar e descrever em Verilog, usando apenas portas nativas nand
+módulo equivalente à expressão ~(a & ~b).
+O nome do arquivo deverá ser Guia_0504.v,
+e poderá seguir o modelo descrito anteriormente.
+Incluir previsão de testes.
+Simular os módulos no Logisim e
+apresentar layout dos circuitos e subcircuitos.
+
+05.) Projetar e descrever em Verilog, usando apenas portas nativas nor
+um módulo equivalente à disjunção exclusiva ((a ^ b) = a xor b).
+O nome do arquivo deverá ser Guia_0505.v,
+e poderá seguir o modelo descrito anteriormente.
+Incluir previsão de testes.
+Simular o módulo no Logisim e
+apresentar layout do circuito e subcircuitos.
+
+06.) Projetar e descrever em Verilog, usando apenas portas nativas nand
+um módulo equivalente à negação da disjunção exclusiva (~(a ^ b) = a xnor b).
+O nome do arquivo deverá ser Guia_0506.v,
+e poderá seguir o modelo descrito anteriormente.
+Incluir previsão de testes.
+Simular o módulo no Logisim e
+apresentar layout do circuito e subcircuitos.

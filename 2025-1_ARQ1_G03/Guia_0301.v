@@ -1,6 +1,6 @@
 /*
 Guia_0301.v
-999999 - Daniel Alves Gonçalves
+874770 - Daniel Alves Gonçalves
 */
 
 module Guia_0301;    // módulo Guia_0301

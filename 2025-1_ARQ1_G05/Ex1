@@ -1,0 +1,85 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001cd4ed4b700 .scope module, "Ex1" "Ex1" 2 23;
+ .timescale 0 0;
+v000001cd4ee031c0_0 .var "a", 0 0;
+v000001cd4ee036c0_0 .var "b", 0 0;
+v000001cd4ee03080_0 .net "s1", 0 0, L_000001cd4ee042b0;  1 drivers
+v000001cd4ee03300_0 .net "s2", 0 0, L_000001cd4ee03d70;  1 drivers
+S_000001cd4ee050e0 .scope module, "A1" "fteste" 2 28, 2 6 0, S_000001cd4ed4b700;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "s";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+L_000001cd4ee054f0 .functor NOR 1, v000001cd4ee031c0_0, v000001cd4ee031c0_0, C4<0>, C4<0>;
+L_000001cd4ee06df0 .functor NOR 1, v000001cd4ee036c0_0, v000001cd4ee036c0_0, C4<0>, C4<0>;
+L_000001cd4ed46b90 .functor NOR 1, v000001cd4ee036c0_0, v000001cd4ee036c0_0, C4<0>, C4<0>;
+L_000001cd4ee04320 .functor NOR 1, L_000001cd4ee06df0, L_000001cd4ed46b90, C4<0>, C4<0>;
+L_000001cd4ee042b0 .functor NOR 1, L_000001cd4ee054f0, L_000001cd4ee04320, C4<0>, C4<0>;
+v000001cd4ed46db0_0 .net *"_ivl_0", 0 0, L_000001cd4ee054f0;  1 drivers
+v000001cd4ed46fd0_0 .net *"_ivl_2", 0 0, L_000001cd4ee06df0;  1 drivers
+v000001cd4ee05270_0 .net *"_ivl_4", 0 0, L_000001cd4ed46b90;  1 drivers
+v000001cd4ee05310_0 .net *"_ivl_6", 0 0, L_000001cd4ee04320;  1 drivers
+v000001cd4ee053b0_0 .net "a", 0 0, v000001cd4ee031c0_0;  1 drivers
+v000001cd4ee05450_0 .net "b", 0 0, v000001cd4ee036c0_0;  1 drivers
+v000001cd4ed46530_0 .net "s", 0 0, L_000001cd4ee042b0;  alias, 1 drivers
+S_000001cd4ed465d0 .scope module, "A2" "fguia_0501" 2 29, 2 14 0, S_000001cd4ed4b700;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "s";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+L_000001cd4ee04390 .functor NOR 1, v000001cd4ee031c0_0, v000001cd4ee031c0_0, C4<0>, C4<0>;
+L_000001cd4ee03d70 .functor NOR 1, L_000001cd4ee04390, v000001cd4ee036c0_0, C4<0>, C4<0>;
+v000001cd4ed46760_0 .net "a", 0 0, v000001cd4ee031c0_0;  alias, 1 drivers
+v000001cd4ed46800_0 .net "b", 0 0, v000001cd4ee036c0_0;  alias, 1 drivers
+v000001cd4ed468a0_0 .net "not_a", 0 0, L_000001cd4ee04390;  1 drivers
+v000001cd4ee02e00_0 .net "s", 0 0, L_000001cd4ee03d70;  alias, 1 drivers
+S_000001cd4edf4630 .scope begin, "main" "main" 2 32, 2 32 0, S_000001cd4ed4b700;
+ .timescale 0 0;
+    .scope S_000001cd4ed4b700;
+T_0 ;
+    %fork t_1, S_000001cd4edf4630;
+    %jmp t_0;
+    .scope S_000001cd4edf4630;
+t_1 ;
+    %vpi_call 2 33 "$display", "Guia 0501 - Daniel Alves Gon\303\247alves - 874770" {0 0 0};
+    %vpi_call 2 34 "$display", "\012 a | b | fteste: a & ~b | fguia_0501: a & ~b " {0 0 0};
+    %vpi_call 2 35 "$display", "---------------------------------------------" {0 0 0};
+    %vpi_call 2 36 "$monitor", " %b | %b |       %b        |         %b         |\012", v000001cd4ee031c0_0, v000001cd4ee036c0_0, v000001cd4ee03080_0, v000001cd4ee03300_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001cd4ee031c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001cd4ee036c0_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001cd4ee031c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001cd4ee036c0_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001cd4ee031c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001cd4ee036c0_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001cd4ee031c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001cd4ee036c0_0, 0, 1;
+    %delay 1, 0;
+    %end;
+    .scope S_000001cd4ed4b700;
+t_0 %join;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Ex1.v";
